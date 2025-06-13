@@ -7,3 +7,11 @@ class EmployeeSerializer(serializers.ModelSerializer):
         model = Employee
         fields = ['id', 'user', 'department', 'position', 'phone']
         read_only_fields = ['user']
+
+
+
+# serializers.py
+from rest_framework import serializers
+
+class ExcelUploadSerializer(serializers.Serializer):
+    file = serializers.FileField()
